@@ -44,39 +44,43 @@
 ## Gallery 
 ### Home Page 
 A clean, futuristic landing screen where players begin their journey, connect wallets, and explore game modes.
-<img width="1915" height="935" alt="image" src="https://github.com/user-attachments/assets/88cbb6eb-d212-4874-87fc-59611fd99b62" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a73f1075-2e98-4940-b1b0-6a3ce4827b6f" />
+
 
 ### Select character 
 Players choose their fighters, each with unique power stats, abilities, and rarity levels.
 <img width="1911" height="941" alt="image" src="https://github.com/user-attachments/assets/dc62f26a-30a9-43b4-bc99-8da1cfbc7872" />
 
+### Main Fight 
+The core gameplay scene where turn-based combat takes place with animations, attacks, and health tracking.
+<img width="1914" height="945" alt="image" src="https://github.com/user-attachments/assets/87b76613-c5f0-4802-9485-c87a67fa0e8a" />
+
+
 ### You Won 
 A victory screen showing battle results, rewards earned, and XP gained.
-<img width="1905" height="940" alt="image" src="https://github.com/user-attachments/assets/9da10c0b-43b0-4e1e-a0ff-81422be7ae9e" />
+<img width="1920" height="920" alt="image" src="https://github.com/user-attachments/assets/59592523-71b0-4a22-ad5a-1bd4ba03e8a0" />
+
 
 ### Save Record in Blockchain
 After each match, battle stats are permanently stored on the Movement Network blockchain for transparency and fairness.
-<img width="1654" height="936" alt="image" src="https://github.com/user-attachments/assets/173e8f29-56d6-47c3-b23d-2546275e695f" />
+<img width="1912" height="1034" alt="image" src="https://github.com/user-attachments/assets/8e570746-8c4c-4f0f-9952-1c7cafce51fa" />
+
 
 ### 
 
 <img width="1232" height="924" alt="image" src="https://github.com/user-attachments/assets/236f4105-1658-45f3-9ef7-37f8d2bdd497" />
 
-### Main Fight 
-The core gameplay scene where turn-based combat takes place with animations, attacks, and health tracking.
-<img width="1914" height="945" alt="image" src="https://github.com/user-attachments/assets/87b76613-c5f0-4802-9485-c87a67fa0e8a" />
+## Profile
+<img width="1912" height="919" alt="image" src="https://github.com/user-attachments/assets/2e07277d-03e8-40a1-aaf3-65e5dbebebb0" />
+
 
 ### LeaderBord 
 Global rankings showcasing top players based on wins, staking power, and on-chain battle history.
-<img width="1912" height="943" alt="image" src="https://github.com/user-attachments/assets/92ebfff9-b8bd-4b4f-b53a-c3fc6169b3ff" />
+<img width="1906" height="916" alt="image" src="https://github.com/user-attachments/assets/37dcb5b7-9da4-4621-9eb4-13353d8b41de" />
 
 ### Stacking 
 Users can stake tokens inside the game to boost rewards, earn yield, and unlock special characters.
-<img width="1910" height="942" alt="image" src="https://github.com/user-attachments/assets/cf2168f9-26cc-4e12-aebc-9b31699ae24f" />
-
-### Staking on Movement Network
-The actual Movement Network dashboard where staking transactions are executed and verified on-chain.
-<img width="1781" height="1021" alt="image" src="https://github.com/user-attachments/assets/0c98efc2-b239-4b99-8ba2-f5a1aa892cb9" />
+<img width="1906" height="1042" alt="image" src="https://github.com/user-attachments/assets/97dc5197-ce37-4023-8113-5ec76676097a" />
 
 
 ## 🌟 Game Features
