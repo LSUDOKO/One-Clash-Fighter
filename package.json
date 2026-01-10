@@ -10,11 +10,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@aptos-labs/ts-sdk": "^1.39.0",
+    "@aptos-labs/ts-sdk": "^5.2.0",
     "@aptos-labs/wallet-adapter-react": "^3.8.0",
     "@aptos-labs/wallet-standard": "^0.5.2",
     "@martianwallet/aptos-wallet-adapter": "^0.0.5",
-    "@mysten/dapp-kit": "^0.19.11",
     "@pontem/wallet-adapter-plugin": "^0.2.1",
     "@tanstack/react-query": "^5.0.0",
     "class-variance-authority": "^0.7.1",
