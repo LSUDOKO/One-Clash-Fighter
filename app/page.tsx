@@ -61,7 +61,7 @@ export default function IntroScreen() {
             </div>
             <WalletConnect />
             <div className="game-text text-sm text-gray-400 mt-4">
-               OneChain Testnet • Play-to-Earn • NFT Fighters
+              Movement Testnet • Play-to-Earn • NFT Fighters
             </div>
           </div>
         ) : (
@@ -77,19 +77,19 @@ export default function IntroScreen() {
                 onClick={() => router.push("/profile")}
                 className="game-button px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded"
               >
-                 PROFILE
+                PROFILE
               </button>
               <button
                 onClick={() => router.push("/leaderboard")}
                 className="game-button px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded"
               >
-                 LEADERBOARD
+                LEADERBOARD
               </button>
               <button
                 onClick={() => router.push("/staking")}
                 className="game-button px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded"
               >
-                 STAKE
+                STAKE
               </button>
             </div>
           </>

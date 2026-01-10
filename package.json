@@ -1,7 +1,7 @@
 {
   "name": "one-clash-fighters",
   "version": "1.0.0",
-  "description": "OneChain blockchain fighting game - Play-to-Earn NFT battles",
+  "description": "Movement Network blockchain fighting game - Play-to-Earn NFT battles",
   "private": true,
   "scripts": {
     "dev": "next dev",

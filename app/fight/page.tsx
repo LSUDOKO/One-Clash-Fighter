@@ -10,9 +10,11 @@ import { Fighter } from "@/components/fighter"
 import { getRandomFighter } from "@/lib/game-utils"
 import { getRandomStageBackground } from "@/lib/stage-utils"
 import { EnhancedPowerBar } from "@/components/enhanced-power-bar"
+import { useSoundContext } from "@/components/sound-context"
 
 export default function FightScreen() {
   const router = useRouter()
+  const { playSFX } = useSoundContext()
   const searchParams = useSearchParams()
   const playerId = searchParams.get("player") || fighters[0].id
   const playerFighter = fighters.find((f) => f.id === playerId) || fighters[0]
@@ -231,6 +233,7 @@ export default function FightScreen() {
                 const damageMultiplier = difficulty
                 setPlayerHealth((prev) => Math.max(0, prev - Math.round(8 * damageMultiplier))) // Increased punch damage
                 setIsPlayerHit(true)
+                playSFX("hit")
                 setTimeout(() => setIsPlayerHit(false), 300)
               }
 
@@ -271,6 +274,7 @@ export default function FightScreen() {
                 const damageMultiplier = difficulty
                 setPlayerHealth((prev) => Math.max(0, prev - Math.round(12 * damageMultiplier))) // Increased kick damage
                 setIsPlayerHit(true)
+                playSFX("hit")
                 setTimeout(() => setIsPlayerHit(false), 300)
               }
 
@@ -554,6 +558,7 @@ export default function FightScreen() {
 
       setPlayerJumpDirection(direction)
       setPlayerState("jump")
+      playSFX("jump")
 
       setTimeout(() => {
         setPlayerState("idle")
@@ -581,6 +586,7 @@ export default function FightScreen() {
     if (isKeyDown.d && playerState === "idle") {
       setPlayerState("punch")
       setPlayerLastAction("punch")
+      playSFX("punch")
       // Stop walking animation during punch
       setIsPlayerWalking(false)
 
@@ -603,6 +609,7 @@ export default function FightScreen() {
         } else {
           setCpuHealth((prev) => Math.max(0, prev - 5)) // Normal damage
           setIsCpuHit(true)
+          playSFX("hit")
           setTimeout(() => setIsCpuHit(false), 300)
         }
 
@@ -631,9 +638,11 @@ export default function FightScreen() {
       if (isJumpKick) {
         setPlayerLastAction("jumpKick")
         setIsPlayerJumpKicking(true)
+        playSFX("kick")
       } else {
         setPlayerState("kick")
         setPlayerLastAction("kick")
+        playSFX("kick")
         // Stop walking animation during kick
         setIsPlayerWalking(false)
       }
@@ -660,6 +669,7 @@ export default function FightScreen() {
           const damage = isJumpKick ? 15 : 10
           setCpuHealth((prev) => Math.max(0, prev - damage)) // Normal damage
           setIsCpuHit(true)
+          playSFX("hit")
           setTimeout(() => setIsCpuHit(false), 300)
         }
 
@@ -721,6 +731,7 @@ export default function FightScreen() {
   const endGame = (winner: "player" | "cpu") => {
     setGameOver(true)
     setWinner(winner)
+    if (winner === "player") playSFX("win")
     if (gameLoopRef.current) clearInterval(gameLoopRef.current)
     if (cpuMovementRef.current) clearInterval(cpuMovementRef.current)
     if (movementIntervalRef.current) clearInterval(movementIntervalRef.current)

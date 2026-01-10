@@ -5,11 +5,13 @@ import { createContext, useContext, useState, useEffect, type ReactNode } from "
 type SoundContextType = {
   isMuted: boolean
   toggleMute: () => void
+  playSFX: (soundName: "punch" | "kick" | "jump" | "hit" | "win") => void
 }
 
 const SoundContext = createContext<SoundContextType>({
   isMuted: false,
-  toggleMute: () => {},
+  toggleMute: () => { },
+  playSFX: () => { },
 })
 
 export const useSoundContext = () => useContext(SoundContext)
@@ -19,20 +21,18 @@ export function SoundProvider({ children }: { children: ReactNode }) {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null)
 
   useEffect(() => {
-    // Background music disabled - add your own MP3 file to /public/sounds/background-music.mp3
-    // Uncomment below when you have the audio file:
-    
-    // const audioElement = new Audio("/sounds/background-music.mp3")
-    // audioElement.loop = true
-    // audioElement.volume = 0.3 // Set volume to 30%
-    // setAudio(audioElement)
+    // Background music enabled
+    const audioElement = new Audio("/sounds/background-music.mp3")
+    audioElement.loop = true
+    audioElement.volume = 0.2 // Set volume to 20%
+    setAudio(audioElement)
 
     // Clean up on unmount
     return () => {
-      // if (audioElement) {
-      //   audioElement.pause()
-      //   audioElement.src = ""
-      // }
+      if (audioElement) {
+        audioElement.pause()
+        audioElement.src = ""
+      }
     }
   }, [])
 
@@ -58,5 +58,17 @@ export function SoundProvider({ children }: { children: ReactNode }) {
     setIsMuted((prev) => !prev)
   }
 
-  return <SoundContext.Provider value={{ isMuted, toggleMute }}>{children}</SoundContext.Provider>
+  const playSFX = (soundName: "punch" | "kick" | "jump" | "hit" | "win") => {
+    if (isMuted) return
+
+    const sfx = new Audio(`/sounds/${soundName}.mp3`)
+    sfx.volume = 0.5
+    sfx.play().catch(err => console.log("SFX play error:", err))
+  }
+
+  return (
+    <SoundContext.Provider value={{ isMuted, toggleMute, playSFX }}>
+      {children}
+    </SoundContext.Provider>
+  )
 }

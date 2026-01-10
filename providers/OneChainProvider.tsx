@@ -5,10 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { getFullnodeUrl } from "@mysten/sui/client";
 import { ONECHAIN_CONFIG } from "@/lib/onechain-config";
 
-// Configure OneChain testnet
+// Configure Movement Testnet
 const { networkConfig } = createNetworkConfig({
-  testnet: { 
-    url: ONECHAIN_CONFIG.RPC_URL 
+  testnet: {
+    url: ONECHAIN_CONFIG.RPC_URL
   },
 });
 
