@@ -1,0 +1,18 @@
+[package]
+name = "OneClashFighters"
+version = "1.0.0"
+
+[addresses]
+one_clash_fighters = "0x234e25fcd07fc478e6d223b72acaf9fa5b1cdc3f4d7dde5b0d1bd1f80f627b0e"
+
+[dependencies.AptosFramework]
+git = "https://github.com/movementlabsxyz/aptos-core.git"
+rev = "movement"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dependencies.AptosStdlib]
+git = "https://github.com/movementlabsxyz/aptos-core.git"
+rev = "movement"
+subdir = "aptos-move/framework/aptos-stdlib"
+
+[dev-dependencies]
